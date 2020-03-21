@@ -31,6 +31,7 @@ public class OnboardingViewController: UIViewController{
     var backgroundColor: UIColor? = .green
     var backgroundImage: UIImage? = nil
     var isDarkFontEnabled: Bool = false
+    var isPageControlActionEnabled: Bool = true
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -88,13 +89,14 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        /*
-            Uncomment below code to enable swiping on page item click
-
+        if isPageControlActionEnabled{
             onboardingPageViewController?.openPage(currentIndex: currentPageIndex, wantedIndex: indexPath.row)
             currentPageIndex = indexPath.row
             collectionView.reloadData()
-        */
+        }
+        else{
+            return
+        }
     }
 }
 
@@ -121,7 +123,6 @@ extension OnboardingViewController{
         isAutoSlideEnabled ? setupTimer() : timer?.invalidate()
         self.view.backgroundColor = backgroundColor
         if backgroundImage != nil { backgroundImageView.image = backgroundImage }
-        
     }
     
     private func setDelegates(){

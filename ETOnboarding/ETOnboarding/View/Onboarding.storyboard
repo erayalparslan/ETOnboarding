@@ -130,13 +130,13 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet consectur" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="mF7-cT-Rcd">
-                                <rect key="frame" x="10.5" y="516" width="393" height="67"/>
+                                <rect key="frame" x="10.5" y="466.5" width="393" height="67"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="dFR-R4-YMB">
-                                <rect key="frame" x="10.5" y="600.5" width="393" height="33.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="dFR-R4-YMB">
+                                <rect key="frame" x="10.5" y="560.5" width="393" height="50.5"/>
                                 <string key="text">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce a felis quis nisl rhoncus sodales. Nunc facilisi rgrgrefffref  fewf wef we f fwef f wef ewf wefwef wewe</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -154,7 +154,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="mI3-LT-Iy2" secondAttribute="trailing" id="6CH-v0-hay"/>
                             <constraint firstItem="ALQ-pL-Q10" firstAttribute="leading" secondItem="GWN-vd-MLA" secondAttribute="leading" id="KkD-U7-jVo"/>
                             <constraint firstItem="mI3-LT-Iy2" firstAttribute="height" secondItem="GWN-vd-MLA" secondAttribute="height" multiplier="3:5" id="MlT-8y-t4c"/>
-                            <constraint firstItem="dFR-R4-YMB" firstAttribute="top" secondItem="mF7-cT-Rcd" secondAttribute="bottom" multiplier="1.03" id="N3L-mb-86G"/>
+                            <constraint firstItem="dFR-R4-YMB" firstAttribute="top" secondItem="mF7-cT-Rcd" secondAttribute="bottom" multiplier="1.05" id="N3L-mb-86G"/>
                             <constraint firstItem="ALQ-pL-Q10" firstAttribute="bottom" secondItem="GWN-vd-MLA" secondAttribute="bottomMargin" id="O7e-1I-7MF"/>
                             <constraint firstItem="mF7-cT-Rcd" firstAttribute="centerX" secondItem="GWN-vd-MLA" secondAttribute="centerX" id="OKi-SL-hCs"/>
                             <constraint firstItem="mI3-LT-Iy2" firstAttribute="centerX" secondItem="GWN-vd-MLA" secondAttribute="centerX" id="VWs-0b-euc"/>
@@ -165,7 +165,7 @@
                             <constraint firstItem="mF7-cT-Rcd" firstAttribute="width" secondItem="GWN-vd-MLA" secondAttribute="width" multiplier="0.95" id="dwp-KR-0oY"/>
                             <constraint firstItem="mI3-LT-Iy2" firstAttribute="top" secondItem="VU7-kc-ibN" secondAttribute="bottom" id="nTo-Ox-aKX"/>
                             <constraint firstAttribute="trailing" secondItem="ALQ-pL-Q10" secondAttribute="trailing" id="pRf-Mh-RDe"/>
-                            <constraint firstItem="2BC-4a-zbR" firstAttribute="top" secondItem="dFR-R4-YMB" secondAttribute="bottom" multiplier="1.06" id="y7n-Zd-0Rb"/>
+                            <constraint firstItem="2BC-4a-zbR" firstAttribute="top" secondItem="dFR-R4-YMB" secondAttribute="bottom" multiplier="1.1" id="y7n-Zd-0Rb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jja-cf-12H"/>
                     </view>

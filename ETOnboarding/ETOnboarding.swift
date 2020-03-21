@@ -11,7 +11,7 @@ import UIKit
 public class ETOnboarding{
     
     
-    public static func show(onViewController: UIViewController, contentList: [PageContent], isAutoSlideEnabled: Bool, slideDuration: TimeInterval = 3, backgroundColor: UIColor, backgroundImage: UIImage? = nil, isDarkFontEnabled: Bool = false){
+    public static func show(onViewController: UIViewController, contentList: [PageContent], isAutoSlideEnabled: Bool, slideDuration: TimeInterval = 3, backgroundColor: UIColor, backgroundImage: UIImage? = nil, isDarkFontEnabled: Bool = false, isPageControlActionEnabled: Bool = true){
         let viewController = UIStoryboard.onboarding.instantiateViewController(withIdentifier: OnboardingViewController.className) as! OnboardingViewController
         viewController.modalPresentationStyle = .fullScreen
         viewController.isAutoSlideEnabled = isAutoSlideEnabled
@@ -20,6 +20,7 @@ public class ETOnboarding{
         viewController.backgroundColor = backgroundColor
         viewController.backgroundImage = backgroundImage
         viewController.isDarkFontEnabled = isDarkFontEnabled
+        viewController.isPageControlActionEnabled = isPageControlActionEnabled
         onViewController.present(viewController, animated: true, completion: nil)
     }
 }
