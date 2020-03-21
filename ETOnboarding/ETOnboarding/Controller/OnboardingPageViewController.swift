@@ -85,7 +85,7 @@ extension OnboardingPageViewController{
         }
         if let viewController = UIStoryboard.onboarding.instantiateViewController(withIdentifier: OnboardingContentViewController.className) as? OnboardingContentViewController{
             viewController.loadContentWith(index: index, onboardContent: onboardingContentList[index])
-            viewController.makeFontsDark()
+            if isDarkFontsEnabled { viewController.makeFontsDark() }
             return viewController
         }
         return nil
@@ -95,6 +95,7 @@ extension OnboardingPageViewController{
         dataSource = self
         delegate   = self
         if let firstContentViewController = contentViewController(at: 0){
+            if isDarkFontsEnabled { firstContentViewController.makeFontsDark() }
             setViewControllers([firstContentViewController], direction: .forward, animated: true, completion: nil)
         }
     }

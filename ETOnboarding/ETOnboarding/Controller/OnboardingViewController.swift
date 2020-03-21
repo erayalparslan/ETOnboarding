@@ -27,9 +27,10 @@ public class OnboardingViewController: UIViewController{
     private var timer: Timer?
     var contentList = [PageContent]()
     var isAutoSlideEnabled = true
+    var slideDuration: TimeInterval = 3
     var backgroundColor: UIColor? = .green
     var backgroundImage: UIImage? = nil
-    var isDarkFontsEnabled: Bool = false
+    var isDarkFontEnabled: Bool = false
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,7 @@ public class OnboardingViewController: UIViewController{
             onboardingPageViewController = viewController
             onboardingPageViewController?.onboardingDelegate = self
             onboardingPageViewController?.loadContentWith(list: contentList)
+            onboardingPageViewController?.isDarkFontsEnabled = isDarkFontEnabled
         }
     }
 }
@@ -53,7 +55,7 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let selectedCell = collectionView.dequeueReusableCell(withReuseIdentifier: SelectedPagingDotCollectionViewCell.className, for: indexPath) as? SelectedPagingDotCollectionViewCell, indexPath.row == currentPageIndex{
-            selectedCell.updateCellWith(value: indexPath.row+1)
+            selectedCell.updateCellWith(value: indexPath.row+1, isDarkFontEnabled: isDarkFontEnabled)
             return selectedCell
         }
         
@@ -64,13 +66,13 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
             if onboardingPageViewController?.getNumberOfPages() == indexPath.row+1 { isLastCell = true } else { isLastCell = false}
             
             if isFirstCell{
-                cell.updateCellWith(value: indexPath.row+1, isFirst: true)
+                cell.updateCellWith(value: indexPath.row+1, isDarkFontEnabled: isDarkFontEnabled, isFirst: true)
             }
             else if isLastCell{
-                cell.updateCellWith(value: indexPath.row+1, isLast: true)
+                cell.updateCellWith(value: indexPath.row+1, isDarkFontEnabled: isDarkFontEnabled, isLast: true)
             }
             else{
-                cell.updateCellWith(value: indexPath.row+1)
+                cell.updateCellWith(value: indexPath.row+1 , isDarkFontEnabled: isDarkFontEnabled)
             }
             return cell
         }
@@ -119,7 +121,7 @@ extension OnboardingViewController{
         isAutoSlideEnabled ? setupTimer() : timer?.invalidate()
         self.view.backgroundColor = backgroundColor
         if backgroundImage != nil { backgroundImageView.image = backgroundImage }
-        onboardingPageViewController?.isDarkFontsEnabled = isDarkFontsEnabled
+        
     }
     
     private func setDelegates(){
@@ -144,7 +146,7 @@ extension OnboardingViewController{
     
     private func setupTimer(){
         timer?.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(updateSliderPage), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: slideDuration, target: self, selector: #selector(updateSliderPage), userInfo: nil, repeats: true)
     }
     
     @objc func updateSliderPage() {
