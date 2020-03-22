@@ -8,15 +8,10 @@
 
 import UIKit
 
-protocol OnboardingContentViewControllerDelegate {
-    func didClickContentAt(index: Int)
-}
-
 class OnboardingContentViewController: UIViewController{
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
-    var delegate: OnboardingContentViewControllerDelegate?
     private var index = 0
     private var image: UIImage?
     private var heading = ""
@@ -26,10 +21,6 @@ class OnboardingContentViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-    }
-    
-    @IBAction func didClickContent(_ sender: UIButton) {
-        delegate?.didClickContentAt(index: index)
     }
 }
 

@@ -19,9 +19,11 @@ public protocol OnboardingViewControllerDelegate{
 public class OnboardingViewController: UIViewController{
     @IBOutlet weak var onboardingContainerView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var skipButton: UIView!
+    
     @IBOutlet weak var backgroundImageView: UIImageView!
     private weak var onboardingPageViewController: OnboardingPageViewController?
+    
+    @IBOutlet weak var bottomView: UIView!
     public var delegate: OnboardingViewControllerDelegate?
     private var currentPageIndex = 0
     private var timer: Timer?
@@ -32,6 +34,7 @@ public class OnboardingViewController: UIViewController{
     var backgroundImage: UIImage? = nil
     var isDarkFontEnabled: Bool = false
     var isPageControlActionEnabled: Bool = true
+//    var skipButton: Any!
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -123,6 +126,18 @@ extension OnboardingViewController{
         isAutoSlideEnabled ? setupTimer() : timer?.invalidate()
         self.view.backgroundColor = backgroundColor
         if backgroundImage != nil { backgroundImageView.image = backgroundImage }
+        
+        let skipButton = StandartButton(frame: .zero)
+        
+        skipButton.setTitle(value: "SKIP")
+        skipButton.translatesAutoresizingMaskIntoConstraints = false
+        bottomView.addSubview(skipButton)
+        skipButton.backgroundColor = .white
+        skipButton.widthAnchor.constraint(equalTo: bottomView.widthAnchor, multiplier: 0.8).isActive = true
+        skipButton.bottomAnchor.constraint(equalTo: bottomView.bottomAnchor, constant: -20).isActive = true
+        skipButton.centerXAnchor.constraint(equalTo: bottomView.centerXAnchor, constant: 0).isActive = true
+        skipButton.heightAnchor.constraint(equalTo: skipButton.widthAnchor, multiplier: 34/200).isActive = true
+        
     }
     
     private func setDelegates(){

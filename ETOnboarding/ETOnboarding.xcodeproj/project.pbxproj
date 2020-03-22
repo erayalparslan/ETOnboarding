@@ -22,6 +22,8 @@
 		50D7AA2E2423FC8200D9DFF9 /* UnselectedPagingDotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D7AA2C2423FC8200D9DFF9 /* UnselectedPagingDotCollectionViewCell.swift */; };
 		50D7AA2F2423FC8200D9DFF9 /* UnselectedPagingDotCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D7AA2D2423FC8200D9DFF9 /* UnselectedPagingDotCollectionViewCell.xib */; };
 		50D7AA3C2423FF0100D9DFF9 /* ETOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D7AA3B2423FF0100D9DFF9 /* ETOnboarding.swift */; };
+		50E33C7024263D97003A2684 /* StandartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E33C6F24263D97003A2684 /* StandartButton.swift */; };
+		50E33C7224263DA0003A2684 /* StandartButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50E33C7124263DA0003A2684 /* StandartButton.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		50D7AA2C2423FC8200D9DFF9 /* UnselectedPagingDotCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnselectedPagingDotCollectionViewCell.swift; sourceTree = "<group>"; };
 		50D7AA2D2423FC8200D9DFF9 /* UnselectedPagingDotCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnselectedPagingDotCollectionViewCell.xib; sourceTree = "<group>"; };
 		50D7AA3B2423FF0100D9DFF9 /* ETOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETOnboarding.swift; sourceTree = "<group>"; };
+		50E33C6F24263D97003A2684 /* StandartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartButton.swift; sourceTree = "<group>"; };
+		50E33C7124263DA0003A2684 /* StandartButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StandartButton.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 		50D7AA112423F6C800D9DFF9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				50E33C6E24263D3A003A2684 /* Buttons */,
 				50D7AA2B2423FC4F00D9DFF9 /* UnselectedPagingDotCollectionViewCell */,
 				50D7AA262423FC2700D9DFF9 /* SelectedPagingDotCollectionViewCell */,
 				50D7AA122423F6ED00D9DFF9 /* Onboarding.storyboard */,
@@ -140,6 +145,23 @@
 				50D7AA2D2423FC8200D9DFF9 /* UnselectedPagingDotCollectionViewCell.xib */,
 			);
 			path = UnselectedPagingDotCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		50E33C6E24263D3A003A2684 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				50E33CB92426A360003A2684 /* StandartButton */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		50E33CB92426A360003A2684 /* StandartButton */ = {
+			isa = PBXGroup;
+			children = (
+				50E33C6F24263D97003A2684 /* StandartButton.swift */,
+				50E33C7124263DA0003A2684 /* StandartButton.xib */,
+			);
+			path = StandartButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50D7AA2F2423FC8200D9DFF9 /* UnselectedPagingDotCollectionViewCell.xib in Resources */,
+				50E33C7224263DA0003A2684 /* StandartButton.xib in Resources */,
 				50D7AA132423F6ED00D9DFF9 /* Onboarding.storyboard in Resources */,
 				5091B18D242513400058D1F0 /* Assets.xcassets in Resources */,
 				50D7AA2A2423FC3F00D9DFF9 /* SelectedPagingDotCollectionViewCell.xib in Resources */,
@@ -233,6 +256,7 @@
 				50D7AA172423F75800D9DFF9 /* PageContent.swift in Sources */,
 				50D7AA1B2423F7C600D9DFF9 /* OnboardingPageViewController.swift in Sources */,
 				50D7AA252423FB8E00D9DFF9 /* OnboardingViewController.swift in Sources */,
+				50E33C7024263D97003A2684 /* StandartButton.swift in Sources */,
 				50D7AA3C2423FF0100D9DFF9 /* ETOnboarding.swift in Sources */,
 				50D7AA1E2423F81D00D9DFF9 /* UIStoryboardExtension.swift in Sources */,
 				50D7AA192423F7A300D9DFF9 /* OnboardingContentViewController.swift in Sources */,

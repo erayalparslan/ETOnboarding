@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16092.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16082.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StandartButton" customModule="ETOnboarding" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="dws-cp-2td" id="FZP-ot-tPI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rVD-TG-m1i">
+            <rect key="frame" x="0.0" y="0.0" width="438" height="82"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dws-cp-2td">
+                    <rect key="frame" x="0.0" y="0.0" width="438" height="82"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <connections>
+                        <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="3iL-Lr-IJC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dws-cp-2td" secondAttribute="trailing" id="GoQ-GW-pJf"/>
+                <constraint firstItem="dws-cp-2td" firstAttribute="leading" secondItem="rVD-TG-m1i" secondAttribute="leading" id="Yyr-l5-aDY"/>
+                <constraint firstItem="dws-cp-2td" firstAttribute="top" secondItem="rVD-TG-m1i" secondAttribute="top" id="ayj-tZ-0H5"/>
+                <constraint firstAttribute="bottom" secondItem="dws-cp-2td" secondAttribute="bottom" id="zqc-1m-YZ2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Cim-IN-FLq"/>
+            <point key="canvasLocation" x="366.66666666666669" y="152.67857142857142"/>
+        </view>
+    </objects>
+</document>
