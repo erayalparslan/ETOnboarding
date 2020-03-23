@@ -9,9 +9,7 @@
 import UIKit
 
 public class ETOnboarding{
-    
-    
-    public static func show(onViewController: UIViewController, contentList: [PageContent], isAutoSlideEnabled: Bool, slideDuration: TimeInterval = 3, backgroundColor: UIColor, backgroundImage: UIImage? = nil, isDarkFontEnabled: Bool = false, isPageControlActionEnabled: Bool = true){
+    public static func show(onViewController: UIViewController, contentList: [PageContent], isAutoSlideEnabled: Bool, slideDuration: TimeInterval = 3, backgroundColor: UIColor, backgroundImage: UIImage? = nil, isDarkFontEnabled: Bool = false, isPageControlActionEnabled: Bool = true, actionButtonTitle: String = "SKIP"){
         let viewController = UIStoryboard.onboarding.instantiateViewController(withIdentifier: OnboardingViewController.className) as! OnboardingViewController
         viewController.modalPresentationStyle = .fullScreen
         viewController.isAutoSlideEnabled = isAutoSlideEnabled
@@ -21,6 +19,8 @@ public class ETOnboarding{
         viewController.backgroundImage = backgroundImage
         viewController.isDarkFontEnabled = isDarkFontEnabled
         viewController.isPageControlActionEnabled = isPageControlActionEnabled
+        viewController.buttonTitle = actionButtonTitle
+        viewController.delegate = onViewController as? ETOnboardingDelegate
         onViewController.present(viewController, animated: true, completion: nil)
     }
 }

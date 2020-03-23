@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5086BF1C24291B0D0005AA91 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5086BF1B24291B0D0005AA91 /* UIViewExtension.swift */; };
 		5091B18D242513400058D1F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091B18C242513400058D1F0 /* Assets.xcassets */; };
 		50D7AA0B2423F67C00D9DFF9 /* ETOnboarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 50D7AA092423F67C00D9DFF9 /* ETOnboarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50D7AA132423F6ED00D9DFF9 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D7AA122423F6ED00D9DFF9 /* Onboarding.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5086BF1B24291B0D0005AA91 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		5091B18C242513400058D1F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50D7AA062423F67C00D9DFF9 /* ETOnboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ETOnboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D7AA092423F67C00D9DFF9 /* ETOnboarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETOnboarding.h; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				50D7AA1D2423F81D00D9DFF9 /* UIStoryboardExtension.swift */,
 				50D7AA1F2423FB1600D9DFF9 /* CollectionViewCenteredFlowLayout.swift */,
 				50D7AA222423FB5000D9DFF9 /* NSObjectExtension.swift */,
+				5086BF1B24291B0D0005AA91 /* UIViewExtension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				50D7AA232423FB5000D9DFF9 /* NSObjectExtension.swift in Sources */,
 				50D7AA172423F75800D9DFF9 /* PageContent.swift in Sources */,
 				50D7AA1B2423F7C600D9DFF9 /* OnboardingPageViewController.swift in Sources */,
+				5086BF1C24291B0D0005AA91 /* UIViewExtension.swift in Sources */,
 				50D7AA252423FB8E00D9DFF9 /* OnboardingViewController.swift in Sources */,
 				50E33C7024263D97003A2684 /* StandartButton.swift in Sources */,
 				50D7AA3C2423FF0100D9DFF9 /* ETOnboarding.swift in Sources */,

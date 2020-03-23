@@ -9,7 +9,7 @@
 import UIKit
 
 
-public protocol OnboardingViewControllerDelegate{
+public protocol ETOnboardingDelegate{
     func didClickActionButton()
 }
 
@@ -24,7 +24,7 @@ public class OnboardingViewController: UIViewController{
     private weak var onboardingPageViewController: OnboardingPageViewController?
     
     @IBOutlet weak var bottomView: UIView!
-    public var delegate: OnboardingViewControllerDelegate?
+    public var delegate: ETOnboardingDelegate?
     private var currentPageIndex = 0
     private var timer: Timer?
     var contentList = [PageContent]()
@@ -34,7 +34,7 @@ public class OnboardingViewController: UIViewController{
     var backgroundImage: UIImage? = nil
     var isDarkFontEnabled: Bool = false
     var isPageControlActionEnabled: Bool = true
-//    var skipButton: Any!
+    var buttonTitle = "SKIP"
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -126,23 +126,36 @@ extension OnboardingViewController{
         isAutoSlideEnabled ? setupTimer() : timer?.invalidate()
         self.view.backgroundColor = backgroundColor
         if backgroundImage != nil { backgroundImageView.image = backgroundImage }
-        
-        let skipButton = StandartButton(frame: .zero)
-        
-        skipButton.setTitle(value: "SKIP")
-        skipButton.translatesAutoresizingMaskIntoConstraints = false
-        bottomView.addSubview(skipButton)
-        skipButton.backgroundColor = .white
-        skipButton.widthAnchor.constraint(equalTo: bottomView.widthAnchor, multiplier: 0.8).isActive = true
-        skipButton.bottomAnchor.constraint(equalTo: bottomView.bottomAnchor, constant: -20).isActive = true
-        skipButton.centerXAnchor.constraint(equalTo: bottomView.centerXAnchor, constant: 0).isActive = true
-        skipButton.heightAnchor.constraint(equalTo: skipButton.widthAnchor, multiplier: 34/200).isActive = true
-        
+        setupActionButton()
+    }
+    
+    @objc private func actionButtonClicked(){
+        self.dismiss(animated: true) {
+            self.delegate?.didClickActionButton()
+        }
     }
     
     private func setDelegates(){
         collectionView.delegate   = self
         collectionView.dataSource = self
+    }
+    
+    private func setupActionButton(){
+        let actionButton = StandartButton(frame: .zero)
+        actionButton.setTitle(value: buttonTitle)
+        actionButton.translatesAutoresizingMaskIntoConstraints = false
+        bottomView.addSubview(actionButton)
+        actionButton.backgroundColor = .white
+        actionButton.widthAnchor.constraint(equalTo: bottomView.widthAnchor, multiplier: 0.8).isActive = true
+        actionButton.bottomAnchor.constraint(equalTo: bottomView.bottomAnchor, constant: -25).isActive = true
+        actionButton.centerXAnchor.constraint(equalTo: bottomView.centerXAnchor, constant: 0).isActive = true
+        actionButton.heightAnchor.constraint(equalTo: actionButton.widthAnchor, multiplier: 1/5).isActive = true
+        
+        actionButton.layer.cornerRadius = 13
+        actionButton.tintColor = .black
+        actionButton.button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        actionButton.addShadow()
+        actionButton.button.addTarget(self, action: #selector(actionButtonClicked), for: .touchUpInside)
     }
     
     private func registerCells(){

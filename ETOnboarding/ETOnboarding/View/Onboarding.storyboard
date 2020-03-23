@@ -24,16 +24,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJ7-nH-xMp">
-                                <rect key="frame" x="0.0" y="96.5" width="414" height="537.5"/>
+                                <rect key="frame" x="0.0" y="82" width="414" height="537.5"/>
                                 <connections>
                                     <segue destination="4Fh-XI-Adb" kind="embed" id="rVy-MD-GUf"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDi-EJ-MuT">
-                                <rect key="frame" x="0.0" y="674" width="414" height="188"/>
+                                <rect key="frame" x="0.0" y="638" width="414" height="224"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OKj-uX-hst">
-                                        <rect key="frame" x="25" y="5" width="364" height="42"/>
+                                        <rect key="frame" x="25" y="0.0" width="364" height="42"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="x1J-Ki-Tbw"/>
@@ -59,7 +59,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="OKj-uX-hst" secondAttribute="trailing" constant="25" id="28c-k5-8tN"/>
-                                    <constraint firstItem="OKj-uX-hst" firstAttribute="top" secondItem="JDi-EJ-MuT" secondAttribute="top" constant="5" id="Ggx-AJ-7Vd"/>
+                                    <constraint firstItem="OKj-uX-hst" firstAttribute="top" secondItem="JDi-EJ-MuT" secondAttribute="top" id="Ggx-AJ-7Vd"/>
                                     <constraint firstItem="OKj-uX-hst" firstAttribute="centerX" secondItem="JDi-EJ-MuT" secondAttribute="centerX" id="QZn-7N-Bs3"/>
                                     <constraint firstItem="OKj-uX-hst" firstAttribute="leading" secondItem="JDi-EJ-MuT" secondAttribute="leading" constant="25" id="l9O-QN-sDO"/>
                                 </constraints>
@@ -70,11 +70,11 @@
                             <constraint firstAttribute="trailing" secondItem="JDi-EJ-MuT" secondAttribute="trailing" id="CS2-at-BLQ"/>
                             <constraint firstItem="XJ7-nH-xMp" firstAttribute="width" secondItem="Jeb-IR-2HG" secondAttribute="width" id="J7Z-c3-bGA"/>
                             <constraint firstItem="9I5-eE-axF" firstAttribute="top" secondItem="Jeb-IR-2HG" secondAttribute="top" id="Lwp-ee-s4l"/>
-                            <constraint firstItem="JDi-EJ-MuT" firstAttribute="height" secondItem="Jeb-IR-2HG" secondAttribute="height" multiplier="0.21" id="TB9-eo-03E"/>
+                            <constraint firstItem="JDi-EJ-MuT" firstAttribute="height" secondItem="Jeb-IR-2HG" secondAttribute="height" multiplier="0.25" id="TB9-eo-03E"/>
                             <constraint firstItem="5zU-o3-7bZ" firstAttribute="top" secondItem="JDi-EJ-MuT" secondAttribute="bottom" id="WdQ-ti-YiD"/>
                             <constraint firstAttribute="bottom" secondItem="9I5-eE-axF" secondAttribute="bottom" id="XvI-uA-JWj"/>
                             <constraint firstItem="JDi-EJ-MuT" firstAttribute="leading" secondItem="Jeb-IR-2HG" secondAttribute="leading" id="YCE-ZR-YXQ"/>
-                            <constraint firstItem="JDi-EJ-MuT" firstAttribute="top" secondItem="XJ7-nH-xMp" secondAttribute="bottom" multiplier="1.05" constant="8" symbolic="YES" id="mRd-8j-tQ0"/>
+                            <constraint firstItem="JDi-EJ-MuT" firstAttribute="top" secondItem="XJ7-nH-xMp" secondAttribute="bottom" multiplier="1.03" id="mRd-8j-tQ0"/>
                             <constraint firstItem="XJ7-nH-xMp" firstAttribute="centerX" secondItem="Jeb-IR-2HG" secondAttribute="centerX" id="muN-GG-oEh"/>
                             <constraint firstItem="9I5-eE-axF" firstAttribute="leading" secondItem="Jeb-IR-2HG" secondAttribute="leading" id="t3W-lR-RKT"/>
                             <constraint firstItem="XJ7-nH-xMp" firstAttribute="height" secondItem="Jeb-IR-2HG" secondAttribute="height" multiplier="0.6" id="tWO-r2-9b3"/>
